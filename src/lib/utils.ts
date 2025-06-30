@@ -1,12 +1,5 @@
 import { GithubRepo } from "@/types/github";
 
-export const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-    }
-};
-
 export function navigateTo(name: "Home" | "About" | "Projects", goToIndex?: (index: number) => void) {
     if (!goToIndex) return
 

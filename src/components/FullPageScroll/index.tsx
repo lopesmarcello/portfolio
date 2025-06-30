@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import React from 'react'
-import { FullPageScrollProps } from './types'
+import { FullPageScrollProps, SectionChildrenProps } from './types'
 import { NavigationProgress } from '../NavigationProgress'
 
 
@@ -201,7 +201,7 @@ export default function FullPageScroll({
                     >
                         {React.Children.map(section.content, (child) => {
                             if (React.isValidElement(child)) {
-                                return React.cloneElement(child, { goToIndex });
+                                return React.cloneElement(child as React.ReactElement<SectionChildrenProps>, { goToIndex });
                             }
                             return child;
                         })}

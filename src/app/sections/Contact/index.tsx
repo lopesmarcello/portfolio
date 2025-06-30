@@ -5,7 +5,7 @@ import { SectionChildrenProps } from "@/components/FullPageScroll/types";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 
-export const Contact = (props: SectionChildrenProps) => {
+export const Contact = ({}: SectionChildrenProps) => {
     return (
         <section className="relative h-screen w-screen bg-black flex flex-col items-center justify-center text-white px-6">
 

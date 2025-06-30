@@ -8,10 +8,10 @@ interface ErrorBoundaryState {
 }
 
 export class ErrorBoundary extends React.Component<
-    React.PropsWithChildren<{}>,
+    React.PropsWithChildren<object>,
     ErrorBoundaryState
 > {
-    constructor(props: React.PropsWithChildren<{}>) {
+    constructor(props: React.PropsWithChildren<object>) {
         super(props);
         this.state = { hasError: false };
     }
@@ -31,7 +31,7 @@ export class ErrorBoundary extends React.Component<
                     <div className="text-center">
                         <h2 className="text-2xl font-bold mb-4">Something went wrong</h2>
                         <p className="text-gray-400 mb-4">
-                            We're sorry, but something unexpected happened.
+                            We&apos;re sorry, but something unexpected happened.
                         </p>
                         <button
                             onClick={() => window.location.reload()}

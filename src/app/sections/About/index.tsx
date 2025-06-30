@@ -54,7 +54,7 @@ export const About = ({ goToIndex }: SectionChildrenProps) => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.9, delay: 0.2 }}
                 >
-                    I'm a front-end developer focused on modern, accessible, and high-performance experiences. With a design and usability-centered approach, I turn ideas into functional and elegant interfaces.
+                    I&apos;m a front-end developer focused on modern, accessible, and high-performance experiences. With a design and usability-centered approach, I turn ideas into functional and elegant interfaces.
                 </motion.p>
 
                 <motion.div

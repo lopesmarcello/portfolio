@@ -1,6 +1,5 @@
 "use client";
 
-/* eslint-disable react/no-unknown-property */
 import { useRef, useState, useEffect } from "react";
 import { Canvas, useFrame, useThree, ThreeEvent } from "@react-three/fiber";
 import { EffectComposer, wrapEffect } from "@react-three/postprocessing";
@@ -135,9 +134,9 @@ void mainImage(in vec4 inputColor, in vec2 uv, out vec4 outputColor) {
 `;
 
 class RetroEffectImpl extends Effect {
-  public uniforms: Map<string, THREE.Uniform<any>>;
+  public uniforms: Map<string, THREE.Uniform<unknown>>;
   constructor() {
-    const uniforms = new Map<string, THREE.Uniform<any>>([
+    const uniforms = new Map<string, THREE.Uniform<unknown>>([
       ["colorNum", new THREE.Uniform(4.0)],
       ["pixelSize", new THREE.Uniform(2.0)],
     ]);
@@ -148,13 +147,13 @@ class RetroEffectImpl extends Effect {
     this.uniforms.get("colorNum")!.value = value;
   }
   get colorNum(): number {
-    return this.uniforms.get("colorNum")!.value;
+    return this.uniforms.get("colorNum")!.value as number;
   }
   set pixelSize(value: number) {
     this.uniforms.get("pixelSize")!.value = value;
   }
   get pixelSize(): number {
-    return this.uniforms.get("pixelSize")!.value;
+    return this.uniforms.get("pixelSize")!.value as number;
   }
 }
 
@@ -174,7 +173,7 @@ const RetroEffect = forwardRef<
 RetroEffect.displayName = "RetroEffect";
 
 interface WaveUniforms {
-  [key: string]: THREE.Uniform<any>;
+  [key: string]: THREE.Uniform<unknown>;
   time: THREE.Uniform<number>;
   resolution: THREE.Uniform<THREE.Vector2>;
   waveSpeed: THREE.Uniform<number>;
@@ -318,7 +317,7 @@ export default function Dither({
     <Canvas
       className="w-full h-full relative"
       camera={{ position: [0, 0, 6] }}
-      dpr={window !== undefined ? window.devicePixelRatio : undefined}
+      dpr={typeof window !== 'undefined' ? window.devicePixelRatio : 1}
       gl={{ antialias: true, preserveDrawingBuffer: true }}
     >
       <DitheredWaves

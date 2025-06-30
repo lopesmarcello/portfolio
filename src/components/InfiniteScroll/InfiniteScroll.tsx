@@ -70,7 +70,7 @@ const InfiniteScroll: React.FC<InfiniteScrollProps> = ({
   }, [])
 
   useEffect(() => {
-    const container = containerRef.current;
+                const container = containerRef.current!;
     if (!container) return;
     if (items.length === 0) return;
 
@@ -97,10 +97,10 @@ const InfiniteScroll: React.FC<InfiniteScrollProps> = ({
       type: "wheel,touch,pointer",
       preventDefault: true,
       onPress: ({ target }) => {
-        (target as HTMLElement).style.cursor = "grabbing";
+((target as HTMLElement).style.cursor = "grabbing");
       },
       onRelease: ({ target }) => {
-        (target as HTMLElement).style.cursor = "grab";
+((target as HTMLElement).style.cursor = "grab");
       },
       onChange: ({ deltaY, isDragging, event }) => {
         const d = event.type === "wheel" ? -deltaY : deltaY;
@@ -155,7 +155,7 @@ const InfiniteScroll: React.FC<InfiniteScrollProps> = ({
       } else {
         return () => {
           observer.kill();
-          rafId && cancelAnimationFrame(rafId);
+          if (rafId) cancelAnimationFrame(rafId);
         };
       }
     }

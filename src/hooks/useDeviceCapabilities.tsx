@@ -2,6 +2,14 @@
 
 import { useState, useEffect } from 'react';
 
+// Extend Navigator interface for connection property
+interface NavigatorWithConnection extends Navigator {
+    connection?: {
+        effectiveType: string;
+        downlink: number;
+    };
+}
+
 export const useDeviceCapabilities = () => {
     const [capabilities, setCapabilities] = useState({
         canHandleHeavyAnimations: true,
@@ -10,13 +18,14 @@ export const useDeviceCapabilities = () => {
     });
 
     useEffect(() => {
+        if (typeof window === 'undefined') return;
         const checkCapabilities = () => {
             // Check if mobile
             const isMobile = window.innerWidth < 768 ||
                 /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
             // Check connection quality
-            const connection = (navigator as any).connection;
+            const connection = (navigator as NavigatorWithConnection).connection;
             const hasGoodConnection = !connection ||
                 connection.effectiveType === '4g' ||
                 connection.downlink > 2
