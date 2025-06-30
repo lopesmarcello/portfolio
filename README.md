@@ -1,36 +1,182 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Portfolio 2026 - Marcello Lopes
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-15.3.4-black?logo=next.js&logoColor=white)](https://nextjs.org)
+[![React](https://img.shields.io/badge/React-19.0.0-blue?logo=react&logoColor=white)](https://reactjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.0-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
+[![Three.js](https://img.shields.io/badge/Three.js-0.167.1-black?logo=three.js&logoColor=white)](https://threejs.org)
 
-First, run the development server:
+A modern, performance-optimized portfolio website featuring cutting-edge web technologies, immersive visual effects, and exceptional user experience. Built with accessibility and performance as top priorities.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+### 🎨 **Visual Excellence**
+
+- **Custom WebGL Shaders**: Dithered wave patterns with mouse interaction
+- **Advanced Post-Processing**: Retro-style dithering effects using postprocessing library
+- **Silk Noise Backgrounds**: Procedural animated textures with Three.js
+- **Canvas-based Film Grain**: Customizable noise overlay for cinematic feel
+- **Smooth Animations**: 60fps animations powered by Framer Motion and GSAP
+
+### 🏗️ **Architecture & Performance**
+
+- **Next.js 15.3.4** with App Router and React Server Components
+- **Server-Side Rendering (SSR)** for optimal SEO and initial load performance
+- **Static Generation** for lightning-fast page loads
+- **Turbopack** for ultra-fast development builds
+- **Code Splitting** and lazy loading for optimized bundle sizes
+- **Device Capability Detection** for performance-adaptive rendering
+
+### 📱 **User Experience & Accessibility**
+
+- **Full-Page Scroll System** with multiple input methods:
+  - Mouse wheel navigation
+  - Keyboard navigation (Arrow keys, Page Up/Down)
+  - Touch/swipe gestures with velocity detection
+  - Visual progress indicators
+- **Responsive Design** optimized for all device sizes
+- **Touch-Optimized** with custom gesture handling
+- **Screen Reader Support** with proper ARIA labels and live regions
+- **Error Boundaries** for graceful error handling
+- **Semantic HTML** structure
+
+### 🔧 **Advanced Technical Features**
+
+- **Performance Monitoring**: Hardware acceleration detection
+- **Network-Aware**: Connection quality assessment
+- **Mobile Optimization**: Reduced animations on low-power devices
+- **WebGL Fallbacks**: Graceful degradation for unsupported devices
+- **Custom Hook System**: Reusable device capability detection
+- **Type Safety**: Full TypeScript implementation
+
+### 🎪 **Interactive Components**
+
+- **Dynamic Project Gallery**: Embla Carousel with drag-free scrolling
+- **GitHub Integration**: Real-time repository data fetching
+- **Infinite Scroll Animation**: GSAP-powered continuous scrolling lists
+- **Mouse-Interactive Backgrounds**: Shader-based visual effects
+- **Navigation Progress**: Visual section indicators
+
+## 🛠️ Tech Stack
+
+### **Core Framework**
+
+- **Next.js 15.3.4** - React framework with App Router
+- **React 19.0.0** - Latest React with concurrent features
+- **TypeScript 5.0** - Type-safe development
+
+### **Styling & UI**
+
+- **TailwindCSS 4.0** - Utility-first CSS framework
+- **Framer Motion 12.19.2** - Production-ready motion library
+- **Lucide React** - Beautiful SVG icons
+
+### **3D Graphics & Animation**
+
+- **Three.js 0.167.1** - 3D graphics library
+- **@react-three/fiber 9.1.4** - React renderer for Three.js
+- **@react-three/postprocessing 3.0.4** - Post-processing effects
+- **GSAP 3.13.0** - Professional animation library
+- **OGL 1.0.11** - Lightweight WebGL library
+
+### **Enhanced Interactions**
+
+- **Embla Carousel React 8.6.0** - Smooth carousel component
+- **Custom Canvas Animations** - Film grain and noise effects
+
+### **Development & Quality**
+
+- **ESLint** with Next.js configuration
+- **Geist Font** - Optimized typography
+- **Error Boundaries** - Production error handling
+
+## 🎯 Performance Optimizations
+
+### **Adaptive Rendering**
+
+- Device capability detection prevents heavy animations on low-end devices
+- WebGL support detection with Canvas 2D fallbacks
+- Network quality assessment for content optimization
+- Mobile-specific optimizations and reduced motion
+
+### **Bundle Optimization**
+
+- Tree-shaking and dead code elimination
+- Dynamic imports for heavy 3D components
+- Image optimization with Next.js Image component
+- Font optimization with next/font
+
+### **Runtime Performance**
+
+- 60fps animations with hardware acceleration
+- Efficient WebGL shader compilation
+- Optimized re-renders with React.memo and useMemo
+- Proper cleanup of animation frames and event listeners
+
+## ♿ Accessibility Features
+
+### **Navigation**
+
+- Keyboard navigation support (Arrow keys, Page Up/Down)
+- Screen reader announcements for section changes
+- Focus management and visual indicators
+- Skip links for main content areas
+
+### **Visual Accessibility**
+
+- High contrast design with accessible color ratios
+- Reduced motion respect for users with vestibular disorders
+- Scalable text and responsive design
+- Clear visual hierarchy and semantic structure
+
+### **Screen Reader Support**
+
+- Proper ARIA labels and roles
+- Live regions for dynamic content updates
+- Semantic HTML structure
+- Alternative text for visual elements
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── sections/          # Portfolio sections
+│   │   ├── Introduction/  # Hero section
+│   │   ├── About/         # About section with infinite scroll
+│   │   ├── Projects/      # Project gallery with carousel
+│   │   └── Contact/       # Contact information
+│   ├── globals.css        # Global styles and CSS variables
+│   ├── layout.tsx         # Root layout with error boundary
+│   └── page.tsx           # Main page composition
+├── components/            # Reusable components
+│   ├── animations/        # Canvas-based animations
+│   ├── backgrounds/       # WebGL background effects
+│   ├── ErrorBoundary/     # Error handling component
+│   ├── FullPageScroll/    # Main navigation system
+│   ├── InfiniteScroll/    # GSAP-powered infinite scroll
+│   ├── NavigationProgress/# Visual progress indicator
+│   └── ProjectCard/       # Project display component
+├── hooks/                 # Custom React hooks
+│   └── useDeviceCapabilities.tsx # Performance detection
+├── lib/                   # Utility functions
+│   └── utils.ts           # Navigation and GitHub API helpers
+└── types/                 # TypeScript type definitions
+    └── github.ts          # GitHub API response types
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📝 License
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project is open source and available under the [MIT License](LICENSE).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 👤 Author
 
-## Learn More
+**Marcello Lopes**
 
-To learn more about Next.js, take a look at the following resources:
+- GitHub: [@lopesmarcello](https://github.com/lopesmarcello)
+- LinkedIn: [mlopes30](https://linkedin.com/in/mlopes30)
+- Email: marcellolopesdev@gmail.com
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🌟 **Star this repository if you found it helpful!**

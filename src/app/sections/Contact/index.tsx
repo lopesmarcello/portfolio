@@ -3,9 +3,10 @@
 import Noise from "@/components/animations/Noise/Noise";
 import { SectionChildrenProps } from "@/components/FullPageScroll/types";
 import { Github, Linkedin, Mail } from "lucide-react";
+import Link from "next/link";
 
 
-export const Contact = ({}: SectionChildrenProps) => {
+export const Contact = ({ }: SectionChildrenProps) => {
     return (
         <section className="relative h-screen w-screen bg-black flex flex-col items-center justify-center text-white px-6">
 
@@ -17,39 +18,39 @@ export const Contact = ({}: SectionChildrenProps) => {
                 patternAlpha={12}
             />
 
-            <div className="max-w-xl w-full text-center space-y-6">
+            <div className="max-w-xl w-full text-center space-y-6 z-20">
                 <h2 className="text-3xl md:text-4xl font-bold text-green-400">Get in touch!</h2>
 
                 <p className="text-gray-400">Always open to new ideas, collabs and projects.</p>
 
                 <div className="flex items-center justify-center gap-6 text-2xl">
-                    <a
+                    <Link
                         href="https://github.com/lopesmarcello"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-green-400 transition-colors"
+                        className="hover:text-green-400 transition-colors cursor-pointer"
                         aria-label="GitHub"
                     >
                         <Github />
-                    </a>
+                    </Link>
 
-                    <a
+                    <Link
                         href="https://linkedin.com/in/mlopes30"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-green-400 transition-colors"
+                        className="hover:text-green-400 transition-colors cursor-pointer"
                         aria-label="LinkedIn"
                     >
                         <Linkedin />
-                    </a>
+                    </Link>
 
-                    <a
+                    <Link
                         href="mailto:marcellolopesdev@gmail.com"
-                        className="hover:text-green-400 transition-colors"
+                        className="hover:text-green-400 transition-colors cursor-pointer"
                         aria-label="Email"
                     >
                         <Mail />
-                    </a>
+                    </Link>
                 </div>
 
                 <p className="text-sm text-gray-500 mt-8">
