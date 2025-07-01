@@ -32,7 +32,8 @@ export const fetchRepos = async () => {
   ]
 
   const filtered = repos.filter((repo: GithubRepo) => {
-    return !repo.fork && !!repo.description && repo.description.length > 0 && acceptableLanguages.includes(repo.language.toLowerCase())
+    const isAcceptableLanguage = repo.language ? acceptableLanguages.includes(repo.language) : false
+    return !repo.fork && !!repo.description && repo.description.length > 0 && isAcceptableLanguage
   });
 
   const sorted = filtered.sort(

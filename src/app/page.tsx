@@ -7,7 +7,6 @@ import { GithubRepo } from "@/types/github";
 import { fetchRepos } from "@/lib/utils";
 
 export default async function Home() {
-
   const repos = await fetchRepos() as GithubRepo[];
 
   return (
