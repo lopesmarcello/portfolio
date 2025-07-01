@@ -3,7 +3,9 @@
 import Dither from "@/components/backgrounds/Dither/Dither";
 import Silk from "@/components/backgrounds/Silk/Silk";
 import { SectionChildrenProps } from "@/components/FullPageScroll/types";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useDeviceCapabilities } from "@/hooks/useDeviceCapabilities";
+import { useTranslation } from "@/hooks/useTranslation";
 import { navigateTo, } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Github, Linkedin, ChevronDown } from "lucide-react";
@@ -11,6 +13,7 @@ import { Github, Linkedin, ChevronDown } from "lucide-react";
 
 export const Introduction = ({ goToIndex }: SectionChildrenProps) => {
     const { canHandleHeavyAnimations } = useDeviceCapabilities();
+    const { t } = useTranslation();
 
     return (
         <div className="relative h-screen w-screen bg-black overflow-hidden">
@@ -52,7 +55,7 @@ export const Introduction = ({ goToIndex }: SectionChildrenProps) => {
                     Marcello Lopes
                 </h1>
                 <h2 className="text-sm sm:text-base md:text-lg lg:text-xl text-green-400 font-semibold mt-2 tracking-wide">
-                    Front-End Developer
+                    {t('introduction.role')}
                 </h2>
             </motion.div>
 
@@ -63,18 +66,19 @@ export const Introduction = ({ goToIndex }: SectionChildrenProps) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
             >
+                <LanguageSwitcher />
                 <nav className="flex flex-col md:flex-row gap-2 md:gap-4 text-xs sm:text-sm md:text-base font-medium">
                     <button
                         onClick={() => navigateTo("About", goToIndex)}
                         className="hover:text-green-400 transition text-right md:text-left"
                     >
-                        About
+                        {t('introduction.about')}
                     </button>
                     <button
                         onClick={() => navigateTo("Projects", goToIndex)}
                         className="hover:text-green-400 transition text-right md:text-left"
                     >
-                        Projects
+                        {t('introduction.projects')}
                     </button>
                 </nav>
 

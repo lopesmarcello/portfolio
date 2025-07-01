@@ -1,0 +1,20 @@
+{
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Sou um desenvolvedor front-end focado em experiências modernas, acessíveis e de alta performance. Com uma abordagem centrada em design e usabilidade, transformo ideias em interfaces funcionais e elegantes.",
+    "button": "Ver Projetos →"
+  },
+  "contact": {
+    "title": "Entre em contato!",
+    "description": "Sempre aberto a novas ideias, colaborações e projetos.",
+    "location": "Localizado em São Paulo, Brasil"
+  },
+  "introduction": {
+    "role": "Desenvolvedor Front-End",
+    "about": "Sobre",
+    "projects": "Projetos"
+  },
+  "projects": {
+    "of": "de"
+  }
+}

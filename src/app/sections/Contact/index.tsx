@@ -2,11 +2,14 @@
 
 import Noise from "@/components/animations/Noise/Noise";
 import { SectionChildrenProps } from "@/components/FullPageScroll/types";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 
 
 export const Contact = ({ }: SectionChildrenProps) => {
+    const { t } = useTranslation();
+
     return (
         <section className="relative h-screen w-screen bg-black flex flex-col items-center justify-center text-white px-6">
 
@@ -19,9 +22,9 @@ export const Contact = ({ }: SectionChildrenProps) => {
             />
 
             <div className="max-w-xl w-full text-center space-y-6 z-20">
-                <h2 className="text-3xl md:text-4xl font-bold text-green-400">Get in touch!</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-green-400">{t('contact.title')}</h2>
 
-                <p className="text-gray-400">Always open to new ideas, collabs and projects.</p>
+                <p className="text-gray-400">{t('contact.description')}</p>
 
                 <div className="flex items-center justify-center gap-6 text-2xl">
                     <Link
@@ -54,7 +57,7 @@ export const Contact = ({ }: SectionChildrenProps) => {
                 </div>
 
                 <p className="text-sm text-gray-500 mt-8">
-                    📍 Located in São Paulo, Brazil
+                    📍 {t('contact.location')}
                 </p>
             </div>
         </section>

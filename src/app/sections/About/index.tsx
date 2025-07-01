@@ -5,8 +5,10 @@ import { SectionChildrenProps } from "@/components/FullPageScroll/types";
 import InfiniteScroll from "@/components/InfiniteScroll/InfiniteScroll";
 import { navigateTo } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export const About = ({ goToIndex }: SectionChildrenProps) => {
+    const { t } = useTranslation();
     const items = [
         { content: "Typescript" },
         { content: "React" },
@@ -34,7 +36,7 @@ export const About = ({ goToIndex }: SectionChildrenProps) => {
             />
 
 
-            {/* Blur and Overlay*/}
+            {/* Blur and Overlay */}
             <div className="absolute inset-0 bg-black/80  z-10" />
 
             <Noise
@@ -54,7 +56,7 @@ export const About = ({ goToIndex }: SectionChildrenProps) => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.9, delay: 0.2 }}
                 >
-                    I&apos;m a front-end developer focused on modern, accessible, and high-performance experiences. With a design and usability-centered approach, I turn ideas into functional and elegant interfaces.
+                    {t('about.description')}
                 </motion.p>
 
                 <motion.div
@@ -68,7 +70,7 @@ export const About = ({ goToIndex }: SectionChildrenProps) => {
                         onClick={() => navigateTo("Projects", goToIndex)}
                         className="text-green-400 hover:underline text-base font-medium cursor-pointer"
                     >
-                        See Projects →
+                        {t('about.button')}
                     </button>
                 </motion.div>
             </div>

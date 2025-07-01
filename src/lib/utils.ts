@@ -25,23 +25,19 @@ export const fetchRepos = async () => {
 
   const repos = await res.json() as GithubRepo[];
 
-  const acceptableLanguages = [
-    "typescript",
-    "javascript",
-    "kotlin"
+  // TODO: filter js/ts projects
+
+  const showcasedLanguages = [
+    'javascript',
+    'typescript'
   ]
 
-  const filtered = repos.filter((repo: GithubRepo) => {
-    const isAcceptableLanguage = repo.language ? acceptableLanguages.includes(repo.language) : false
-    return !repo.fork && !!repo.description && repo.description.length > 0 && isAcceptableLanguage
-  });
+  const filteredRepos = repos.filter(item => (!!item.description && item.description.length > 0 && item.language && showcasedLanguages.includes(item.language.toLowerCase())))
 
-  const sorted = filtered.sort(
+  return filteredRepos.sort(
     (a: GithubRepo, b: GithubRepo) =>
       new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
   );
-
-  return sorted
 
 
 }

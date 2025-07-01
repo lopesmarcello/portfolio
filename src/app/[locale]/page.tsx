@@ -1,10 +1,10 @@
 import FullPageScroll from "@/components/FullPageScroll";
-import { About } from "./sections/About";
-import { Introduction } from "./sections/Introduction";
-import { Projects } from "./sections/Projects";
-import { Contact } from "./sections/Contact";
 import { GithubRepo } from "@/types/github";
 import { fetchRepos } from "@/lib/utils";
+import { Introduction } from "../sections/Introduction";
+import { About } from "../sections/About";
+import { Projects } from "../sections/Projects";
+import { Contact } from "../sections/Contact";
 
 export default async function Home() {
   const repos = await fetchRepos() as GithubRepo[];
@@ -17,4 +17,3 @@ export default async function Home() {
       { id: "contact", content: <Contact /> }
     ]} />
   );
-}
