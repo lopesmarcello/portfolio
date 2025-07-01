@@ -8,6 +8,9 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 export const metadata: Metadata = {
   title: "Marcello Lopes | Frontend Developer",
   description: "Portfolio of Marcello Lopes, a Frontend Developer specializing in React, Next.js and React Native.",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 const geist = Geist({
