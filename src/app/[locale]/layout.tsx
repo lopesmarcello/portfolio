@@ -32,11 +32,13 @@ export default async function RootLayout({
         <ErrorBoundary>
           <div className="fixed bottom-0 right-0 w-full h-full z-50 pointer-events-none">
             <div className="flex gap-1 p-2">
-              <SquareArrowUp className="w-5 h-5" />
-              <SquareArrowDown className="w-5 h-5" />
+              <SquareArrowUp className="w-5 h-5" aria-hidden="true" />
+              <SquareArrowDown className="w-5 h-5" aria-hidden="true" />
             </div>
           </div>
-          {children}
+          <main role="region" aria-label="Main content">
+            {children}
+          </main>
         </ErrorBoundary>
       </body>
     </html>

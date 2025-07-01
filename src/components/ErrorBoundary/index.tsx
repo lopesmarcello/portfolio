@@ -22,7 +22,13 @@ export class ErrorBoundary extends React.Component<
 
     componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
         console.error('Error caught by boundary:', error, errorInfo);
+        // In a real application, you would send the error to an error tracking service here.
+        // For example: Sentry.captureException(error, { extra: errorInfo });
     }
+
+    resetErrorBoundary = () => {
+        this.setState({ hasError: false, error: undefined });
+    };
 
     render() {
         if (this.state.hasError) {
@@ -34,8 +40,14 @@ export class ErrorBoundary extends React.Component<
                             We&apos;re sorry, but something unexpected happened.
                         </p>
                         <button
-                            onClick={() => window.location.reload()}
+                            onClick={this.resetErrorBoundary}
                             className="bg-green-400 text-black px-4 py-2 rounded hover:bg-green-300 transition"
+                        >
+                            Try again
+                        </button>
+                        <button
+                            onClick={() => window.location.reload()}
+                            className="ml-4 bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-500 transition"
                         >
                             Reload Page
                         </button>
