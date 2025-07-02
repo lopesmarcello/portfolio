@@ -9,6 +9,8 @@
 <!-- Application Screenshot Placeholder -->
 ![Application Screenshot](https://lopesmarcello.vercel.app/en/screenshot.png)
 
+### [Marcello Lopes' Portfolio](https://lopesmarcello.vercel.app/)
+
 A modern, performance-optimized portfolio website featuring cutting-edge web technologies, immersive visual effects, and exceptional user experience. Built with accessibility and performance as top priorities.
 
 ## ✨ Features
