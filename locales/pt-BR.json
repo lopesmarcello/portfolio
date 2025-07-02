@@ -7,7 +7,8 @@
   "contact": {
     "title": "Entre em contato!",
     "description": "Sempre aberto a novas ideias, colaborações e projetos.",
-    "location": "Localizado em São Paulo, Brasil"
+    "location": "Localizado em São Paulo, Brasil",
+    "button": "Ver Currículo"
   },
   "introduction": {
     "role": "Desenvolvedor Front-End",

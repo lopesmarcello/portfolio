@@ -1,6 +1,7 @@
 "use client"
 
 import Noise from "@/components/animations/Noise/Noise";
+import { Button } from "@/components/Button";
 import { SectionChildrenProps } from "@/components/FullPageScroll/types";
 import { useTranslation } from "@/hooks/useTranslation";
 import { Github, Linkedin, Mail } from "lucide-react";
@@ -8,7 +9,12 @@ import Link from "next/link";
 
 
 export const Contact = ({ }: SectionChildrenProps) => {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
+
+  function handleResumeHref() {
+    if (locale === "pt-BR") return "/pt-BR/curriculo.pdf"
+    return "/en/resume.pdf"
+  }
 
   return (
     <section className="relative h-screen w-screen bg-black flex flex-col items-center justify-center text-white px-6">
@@ -59,6 +65,12 @@ export const Contact = ({ }: SectionChildrenProps) => {
         <p className="text-sm text-gray-500 mt-8">
           📍 {t('contact.location').toString()}
         </p>
+
+        <Button
+          title={t("contact.button").toString()}
+          href={handleResumeHref()}
+
+        />
       </div>
     </section>
   );
