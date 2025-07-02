@@ -24,7 +24,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  const { locale = "en" } = await params;
+  const { locale } = await params;
 
   return (
     <html lang={locale} className={geist.className}>
