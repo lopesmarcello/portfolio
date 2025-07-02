@@ -7,7 +7,8 @@
   "contact": {
     "title": "Get in touch!",
     "description": "Always open to new ideas, collabs and projects.",
-    "location": "Located in São Paulo, Brazil"
+    "location": "Located in São Paulo, Brazil",
+    "button": "See Resume"
   },
   "introduction": {
     "role": "Front-End Developer",
