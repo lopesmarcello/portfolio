@@ -6,11 +6,24 @@
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.0-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 [![Three.js](https://img.shields.io/badge/Three.js-0.167.1-black?logo=three.js&logoColor=white)](https://threejs.org)
 
+<!-- Application Screenshot Placeholder -->
+![Application Screenshot](https://lopesmarcello.vercel.app/screenshot.png)
+
 A modern, performance-optimized portfolio website featuring cutting-edge web technologies, immersive visual effects, and exceptional user experience. Built with accessibility and performance as top priorities.
 
 ## ✨ Features
 
+### 🌐 Internationalization (i18n)
+
+- **Multi-language Support**: Seamlessly switch between English and Portuguese (Brazil) using Next.js App Router and custom `useTranslation` hook.
+- **Dynamic Content**: All user-facing text is managed through JSON locale files, enabling easy content updates and expansion to new languages.
+- **Locale-aware Routing**: URLs are structured to include the active locale (e.g., `/en/about`, `/pt-BR/about`).
+
+
+
 ### 🎨 **Visual Excellence**
+
+### 🌐 Internationalization (i18n)
 
 - **Custom WebGL Shaders**: Dithered wave patterns with mouse interaction
 - **Advanced Post-Processing**: Retro-style dithering effects using postprocessing library
