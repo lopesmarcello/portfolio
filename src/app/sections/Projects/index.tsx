@@ -94,7 +94,7 @@ export const Projects = ({ repos }: ProjectProps) => {
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <span>{selectedIndex + 1}</span>
-              <span>{t('projects.of')}</span>
+              <span>{t('projects.of').toString()}</span>
               <span>{repos.length}</span>
             </div>
             <div className="flex gap-2">
