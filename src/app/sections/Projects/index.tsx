@@ -68,8 +68,6 @@ export const Projects = ({ repos }: ProjectProps) => {
   // Group repos: 2 per column on desktop, 1 per column on mobile
   const columns = chunkArray(repos, isMobile ? 1 : 2);
 
-  console.log("columns =>", columns)
-
   return (
     <div className="relative h-screen w-screen overflow-hidden bg-black text-white flex flex-col justify-center">
       {/* Background */}
