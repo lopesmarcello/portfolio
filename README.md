@@ -7,7 +7,7 @@
 [![Three.js](https://img.shields.io/badge/Three.js-0.167.1-black?logo=three.js&logoColor=white)](https://threejs.org)
 
 <!-- Application Screenshot Placeholder -->
-![Application Screenshot](https://lopesmarcello.vercel.app/screenshot.png)
+![Application Screenshot](https://lopesmarcello.vercel.app/en/screenshot.png)
 
 A modern, performance-optimized portfolio website featuring cutting-edge web technologies, immersive visual effects, and exceptional user experience. Built with accessibility and performance as top priorities.
 
