@@ -3,6 +3,7 @@ import "../[locale]/globals.css";
 import { SquareArrowDown, SquareArrowUp } from "lucide-react";
 import { Geist, } from "next/font/google";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+import { Analytics } from "@vercel/analytics/next";
 
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={geist.className}>
+      <Analytics />
       <body className="w-screen overflow-x-hidden">
         <ErrorBoundary>
           <div className="fixed bottom-0 right-0 w-full h-full z-50 pointer-events-none">
