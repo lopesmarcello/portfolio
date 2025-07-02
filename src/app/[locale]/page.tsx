@@ -17,3 +17,4 @@ export default async function Home() {
       { id: "contact", content: <Contact /> }
     ]} />
   );
+}
